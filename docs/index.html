@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!--LINK CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!--GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  
+</head>
+<body>  
+
+    <main class='container'>
+
+      <section class="container-left">
+        
+
+        <figure>
+          <img src="images/illustration-woman-online-desktop.svg" alt="woman online">
+        </figure>
+        
+        <img src="images/illustration-box-desktop.svg" alt="illistration box">
+
+      </section>
+      
+      <section class="container-rigth">
+
+        <h1>FAQ</h1>
+
+        <div class="block-info">
+
+            <div class="block-info-rigth">
+              <span id="title1">
+                How many team members can I invite?
+              </span>
+
+              <span id='show1'>
+                You can invite up to 2 additional users on the Free plan. There is no limit on 
+                team members for the Premium plan.
+              </span>
+
+            </div>
+
+            <img src="images/icon-arrow-down.svg" alt="arrow" class="block-info-arrow" id="click1" onclick=showinfo()>
+
+        </div>
+
+        <div class="block-info">
+
+          <div class="block-info-rigth">
+            <span>
+              What is the maximum file upload size?
+            </span>
+              
+            <span id='show2'>
+              No more than 2GB. All files in your account must fit your allotted storage space.
+            </span>
+
+          </div>
+
+          <img src="images/icon-arrow-down.svg" alt="arrow" class="block-info-arrow" id="click2" onclick=showinfo2()>
+
+        </div>
+
+        <div class="block-info">
+
+          <div class="block-info-rigth">
+            <span>
+              How do I reset my password?
+            </span>
+
+            <span id='show3'>
+              Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.
+            </span>
+
+          </div>
+
+          <img src="images/icon-arrow-down.svg" alt="arrow" class="block-info-arrow" id="click3" onclick=showinfo3()>
+
+        </div>
+
+        <div class="block-info">
+
+          <div class="block-info-rigth">
+            <span>
+              Can I cancel my subscription?
+            </span>
+
+            <span id='show4'>
+              Yes! Send us a message and we’ll process your request no questions asked.
+            </span>
+
+          </div>
+
+          <img src="images/icon-arrow-down.svg" alt="arrow" class="block-info-arrow" id="click4" onclick=showinfo4()>
+
+        </div>
+
+        <div class="block-info">
+
+          <div class="block-info-rigth">
+            <span>
+              Do you provide additional support?
+            </span>
+
+            <span id='show5'>
+              Chat and email support is available 24/7. Phone lines are open during normal business hours.
+            </span>
+
+          </div>
+
+          <img src="images/icon-arrow-down.svg" alt="arrow" class="block-info-arrow" id="click5" onclick=showinfo5()>
+
+        </div>
+      
+      </section>
+
+    </main>
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">dayan manrique</a>.
+    
+  </div>
+  <script >
+
+    let show1=document.getElementById('show1');
+    let click1=document.getElementById('click1');
+
+    let show2=document.getElementById('show2');
+    let click2=document.getElementById('click2');
+
+    let show3=document.getElementById('show3');
+    let click3=document.getElementById('click3');
+
+    let show4=document.getElementById('show4');
+    let click4=document.getElementById('click4');
+
+    let show5=document.getElementById('show5');
+    let click5=document.getElementById('click5');
+
+    function compilator(show,click){
+
+        if(show.style.display=='block'){
+
+          show.style.display='none';
+          click.style.transform="rotate(360deg)";
+          
+        }
+        else{
+          show.style.display='block';
+          click.style.transform="rotate(180deg)";
+          
+        }
+      }
+
+    function showinfo(){
+      compilator(show1,click1);
+    }
+    function showinfo2(){     
+      compilator(show2,click2);
+    }    
+
+    function showinfo3(){
+      compilator(show3,click3);
+
+    }
+    function showinfo4(){     
+      compilator(show4,click4);
+    }  
+    
+    function showinfo5(){     
+      compilator(show5,click5);
+    }    
+   
+
+  </script>
+</body>
+</html>

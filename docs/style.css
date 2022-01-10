@@ -1,0 +1,179 @@
+/*Gerenal Rules*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*BODY*/
+
+body{
+    display:grid;
+    place-content: center;
+    height:100vh;
+    width:100vw;
+    Font-size: 12px;
+    background-image:linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+
+}
+
+/*CONTAINER*/
+
+.container{
+    display:flex;
+    height:80vh;
+    width: 60vw;
+    background-color:#ffffff;
+    border-radius:20px;
+    
+}
+
+/*CONTAINER LETF*/
+
+.container-left{
+    position: relative;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position:120% 70%;
+    flex: 1;
+    width: 100%;
+    height: 100%;  
+}
+
+
+.container-left figure{
+    
+    object-fit:cover;
+    height:80%;
+    overflow: hidden;
+}
+.container-left figure img{
+    position: relative;
+    height:75%;
+    top:20%;
+    left: -13%;
+    
+}
+.container-left img:nth-child(2){
+    position: relative;
+    height:30%;
+    left: -17%;
+    top:-41%;
+    
+}
+
+/*CONTAINER RIGHT*/
+
+.container-rigth{
+    
+    overflow: auto;
+    height: 100%;
+    width: 100%;  
+    padding-top: 70px;
+    padding-right: 70px;
+}
+
+.container-rigth h1{
+    padding-bottom: 20px;
+
+}
+
+
+/*BLOCK INFO*/
+.block-info{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:  1px solid hsl(240, 5%, 91%);
+    
+}
+
+.block-info img{
+    
+    align-self: center;
+    cursor: pointer;
+}
+.block-info-rigth span{
+    
+    display: block;
+    padding: 10px 0;
+    
+}
+
+.block-info-rigth span:nth-child(1){
+    color:hsl(237, 12%, 33%);
+    font-weight: 700;
+    
+}
+
+.block-info-rigth span:nth-child(1):hover{
+    color:hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.block-info-rigth span:nth-child(2){
+    
+    color:hsl(240, 6%, 50%) ;
+    display:none;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(240, 5%, 91%); }
+
+@media (max-width:850px){
+    .container{
+        flex-direction: column;
+        
+        height:80vh;
+        width: 80vw;
+        margin: 0 auto;
+        
+        
+    }
+
+    
+    .container-left{
+        background-image: none;
+        padding:0;
+        margin:0;
+        flex: 0;
+        height: 80px;
+        
+    } 
+
+    .container-left figure{
+        position: absolute;
+        object-fit:cover;
+        overflow:visible;
+        top:-95%;
+        left: 32%;
+        height:140%;   
+    }
+    
+    .container-left figure img{
+        
+        height:100%;        
+    }
+    .container-left img:nth-child(2){
+        
+        left:30%;
+        top:-2%;
+        height:50% ;
+        
+    }
+
+    .container-rigth{
+        padding:0 20px;
+        place-self: center;
+        overflow:auto;
+            
+    }
+
+   
+        
+}
